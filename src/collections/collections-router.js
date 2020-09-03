@@ -20,7 +20,7 @@ collectionsRouter
                 return res.status(404).json({ error: { message: `There are no recipes for ${main_liquor}.` }})
             }
             res
-                //send 200OK status
+                //send 200-OK status
                 .status(200)
                 //send json response of recipes search result
                 .json(recipes)
