@@ -5,7 +5,8 @@ const cors = require('cors')
 const helmet = require('helmet')
 const { NODE_ENV } = require('./config')
 const errorHandler = require('./middleware/error-handler')
-
+const postRecipeRouter = require('./postrecipe/postrecipe-router')
+const collectionsRouter = require('./collections/collections-router')
 const app = express()
 
 const allowedOrigins = ['http://localhost:3000', 'https://bottoms-up-client.vercel.app/']
@@ -29,6 +30,10 @@ app.use(cors({
 app.get('/', (req, res) => {
     res.send('Hello, world!')
 })
+// path '/postrecipe' , route handler function postRecipeRouter
+app.use('/postrecipe', postRecipeRouter)
+// path '/collections' , route handler function collectionsRouter
+app.use('/collections', collectionsRouter)
 
 //error handler middleware
 app.use(errorHandler)

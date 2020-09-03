@@ -4,5 +4,5 @@ CREATE TABLE collections (
     main_liquor TEXT NOT NULL,
     ingredients TEXT NOT NULL,
     instructions TEXT NOT NULL,
-    created TIMESTAMP DEFAULT now() NOT NULL,
+    created TIMESTAMP DEFAULT now() NOT NULL
 );
