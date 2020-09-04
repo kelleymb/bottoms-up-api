@@ -9,7 +9,7 @@ const postRecipeRouter = require('./postrecipe/postrecipe-router')
 const collectionsRouter = require('./collections/collections-router')
 const app = express()
 
-const allowedOrigins = ['http://localhost:3000', 'https://bottoms-up-client.vercel.app/']
+const allowedOrigins = ['http://localhost:3000', 'https://bottoms-up-client.kelleymb.vercel.app']
 const morganOption = (NODE_ENV === 'production')
   ? 'tiny'
   : 'common';
