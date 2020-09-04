@@ -1,7 +1,6 @@
 const postrecipe = require('../src/postrecipe/postrecipe-router')
 const knex = require('knex')
 const app = require('../src/app')
-const { TEST_DB_URL } = require('../src/config')
 const supertest = require('supertest')
 const { expect } = require('chai')
   
@@ -11,7 +10,7 @@ describe('POST Endpoint', () => {
     before('make knex instance', () => {
         db = knex({
           client: 'pg',
-          connection: TEST_DATABASE_URL,
+          connection: process.env.TEST_DATABASE_URL,
         })
         app.set('db', db)
     })
