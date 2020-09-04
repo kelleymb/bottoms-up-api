@@ -33,7 +33,7 @@ describe('Collections Endpoint', () => {
             ingredients: 'Lorem Ipsum Lorem Ipsum',
             instructions: 'Lorem Ipsum Lorem Ipsum',
         }
-    ]
+    ];
 
     describe('GET collections', () => {
         context('Given there are recipes in the database', () => {
@@ -43,15 +43,15 @@ describe('Collections Endpoint', () => {
                     return supertest(collections)
                         .get(`/collections?main_liquor=${main_liquor}`)
                         .expect(200, expectedRecipe, done())
-            })
+            });
             it('responds with a 400 when the req.query is not valid', (done) => {
                 const invalid_main_liquor = null;
                 return supertest(collections)
                     .get('/collections')
                     .send(invalid_main_liquor)
                     .expect(400, done())
-            })
-        })
+            });
+        });
     })
 
 })
