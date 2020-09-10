@@ -1,4 +1,4 @@
-## Born To Read API
+## Bottoms Up! API
 
 This is the backend for Bottoms Up!. A live version of this app can be found at:  https://bottoms-up-client.kelleymb.vercel.app/
 
