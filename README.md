@@ -2,7 +2,7 @@
 
 This is the backend for Bottoms Up!. A live version of this app can be found at:  https://bottoms-up-client.kelleymb.vercel.app/
 
-The front end client can be found at: https://github.com/kelleymb/bottoms-up-api
+The front end client can be found at: https://github.com/kelleymb/bottoms-up-client
 
 ### Introduction to Bottoms Up!
 
