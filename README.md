@@ -12,6 +12,76 @@ But fear not, Bottoms Up! is here to help you quarantine in style, whether it's 
 
 Be your own bartender, search through various Vodka, Gin, Scotch, Tequila, and Rum recipes and even post your own creations!
 
+### API Overview
+
+<pre>
+<code>
+/api
+.
+|
+|___ /GET
+|     |--- /collections
+|
+|
+|____ /POST
+|       |--- /postrecipe
+|
+|
+|
+</code>
+</pre>
+
+<p>GET /collections</p>
+
+<pre>
+<code>
+//req.query
+{
+  ?main_liquor=main_liquor
+}
+
+//res.body
+{
+  id: Number,
+  drink_name: String,
+  main_liquor: String,
+  ingredients: String,
+  instructions: String,
+  created: Date
+}
+
+//HTTP Status Code: 200 OK
+
+</code>
+</pre>
+
+<p>POST /postrecipe</p>
+
+<pre>
+<code>
+//req.body
+{
+  drink_name: String,
+  main_liquor: String,
+  ingredients: String,
+  instructions: String,
+}
+
+//res.body
+{
+  id: Number,
+  drink_name: String,
+  main_liquor: String,
+  ingredients: String,
+  instructions: String,
+  created: Date
+}
+
+//HTTP Status Code: 201 CREATED
+
+</code>
+</pre>
+
 ### Application Demo
 
 ![](/images/About.png)
